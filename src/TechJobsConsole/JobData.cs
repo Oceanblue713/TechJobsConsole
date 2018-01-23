@@ -51,15 +51,12 @@ namespace TechJobsConsole
 
                 foreach (string key in aj.Keys)
                 {
-                    //string aValue = aj[key];
-                    //string aValueLow = aValue.ToLower();
-                    //if (key.ToLower().Contains(value.ToLower()))
-                    // aValue.ToLower().ContainsKey();
-                    //{
-                    //   tech.Add(aj);
-                    //}
+                    
                     string aValue = aj[key];
-                    if (aValue.ToLower().Contains(value.ToLower()))
+               
+                    string lowaValue = aValue.ToLower();
+                    string lowValue = value.ToLower();
+                    if ( lowaValue.Contains(lowValue))
                     {
                         tech.Add(aj);
                     }
@@ -83,7 +80,9 @@ namespace TechJobsConsole
             {
                 string aValue = row[column];
 
-                if (aValue.ToLower().Contains(value.ToLower()))
+                string lowaValue = aValue.ToLower();
+                string lowValue = value.ToLower();
+                if (lowaValue.Contains(lowValue))
                 {
                     jobs.Add(row);
                 }
